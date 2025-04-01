@@ -57,7 +57,7 @@ const LearningPlanCard = ({
           .map((topic) => topic.trim())
           .filter(Boolean) || [];
 
-  // Format resources as links
+  // Format resources 
   const resourceList =
       plan.resources
           ?.split(",")
