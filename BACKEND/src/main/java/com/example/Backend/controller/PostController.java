@@ -21,7 +21,7 @@ import com.example.Backend.model.Like;
 import com.example.Backend.model.Post;
 import com.example.Backend.service.PostService;
 
-// PostController.java
+// PostController.java (updated)
 @RestController
 @RequestMapping("/api/posts")
 @CrossOrigin(origins = "*")
