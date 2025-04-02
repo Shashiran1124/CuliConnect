@@ -27,6 +27,8 @@ const EditCommunityModal = ({ community, onClose, onCommunityUpdated, currentUse
       toast.error("Please fill all required fields");
       return;
     }
+    
+      // Handles form submission
 
     setLoading(true);
     try {
@@ -141,6 +143,8 @@ const EditCommunityModal = ({ community, onClose, onCommunityUpdated, currentUse
       </div>
     </div>
   );
+  // TODO: Add form validation feedback for each field
+   // TODO: Add loading spinner animation instead of text during update
 };
 
 export default EditCommunityModal;
