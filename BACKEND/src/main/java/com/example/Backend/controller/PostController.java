@@ -29,7 +29,7 @@ public class PostController {
     @Autowired
     private PostService postService;
 
-    // Create a post for a specific user
+    // Create a post for a specific user.
     @PostMapping("/user/{userId}")
     public ResponseEntity<Post> createPostForUser(@PathVariable String userId, @RequestBody Post post) {
         post.setUserId(userId);
