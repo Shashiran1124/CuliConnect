@@ -11,7 +11,6 @@ public class LearningPlan {
     @Id
     private String id;
     private String userId;
-    
     private String userName;
     private String title;
     private String description;
