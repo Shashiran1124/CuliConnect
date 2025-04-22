@@ -17,7 +17,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.web.bind.annotation.*;
-
+/**
+ * AuthController handles authentication-related API endpoints.
+ * Supports OAuth2 login, manual registration, login, and token validation.
+ *
+ * @author Navodya
+ * @version 1.0
+ */
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
