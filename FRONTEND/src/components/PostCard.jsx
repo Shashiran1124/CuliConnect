@@ -52,7 +52,7 @@ const PostCard = ({
       <div className="p-4">
         <p className="text-gray-800 mb-4">{post.description}</p>
 
-        {/* Media Content */}
+        {/* Media Contents */}
         {post.mediaUrls && post.mediaUrls.length > 0 && (
           <div
             className={`grid gap-2 mb-4 ${
