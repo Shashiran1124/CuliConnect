@@ -22,7 +22,7 @@ const PostCard = ({
   const isLikedByUser = post.likes?.some(
     (like) => like.userId === currentUser?.id
   );
-//Post Card
+//Post Card.
   return (
     <div className="bg-white bg-opacity-30 backdrop-blur-lg rounded-xl shadow-md border border-white border-opacity-30 mb-6 overflow-hidden">
       {/* Post Header */}
