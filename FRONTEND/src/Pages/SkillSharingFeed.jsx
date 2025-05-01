@@ -29,7 +29,7 @@ const SkillSharingFeed = () => {
     const {currentUser} = useAuth();
 
     useEffect(() => {
-        // fetch all posts when component mounts
+        // fetch all posts when component mounts.
         fetchPosts();
     }, []);
 
