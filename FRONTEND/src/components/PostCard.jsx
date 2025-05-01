@@ -48,7 +48,7 @@ const PostCard = ({
         </div>
       </div>
 
-      {/* Post Content */}
+      {/* Post Contents */}
       <div className="p-4">
         <p className="text-gray-800 mb-4">{post.description}</p>
 
