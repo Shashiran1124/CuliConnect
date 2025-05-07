@@ -62,6 +62,7 @@ export const CommentForm = ({ postId, onAddComment, currentUser }) => {
   };
 
   return (
+    //form
       <form onSubmit={handleSubmit(onSubmit)} className="flex space-x-2">
         <div className="relative flex-shrink-0">
           <UserAvatar
