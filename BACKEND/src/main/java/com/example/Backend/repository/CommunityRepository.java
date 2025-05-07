@@ -18,4 +18,7 @@ public interface CommunityRepository extends MongoRepository<Community, String> 
     
     @Query("{ 'isPrivate': false }")
     List<Community> findPublicCommunities();
+
+    // TODO: Add search method by community name (e.g., case-insensitive search)
+    // TODO: Add pagination support to queries
 } 

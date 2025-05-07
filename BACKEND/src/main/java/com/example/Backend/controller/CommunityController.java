@@ -7,23 +7,33 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Map;
-
+/**
+ * CommunityController handles API endpoints related to community management.
+ * Provides operations like creating, updating, deleting communities,
+ * managing members/admins, and checking roles.
+ *
+ * @author Navodya
+ * @version 1.0
+ */
 @RestController
 @RequestMapping("/api/communities")
 @CrossOrigin(origins = "*")
 public class CommunityController {
     @Autowired
     private CommunityService communityService;
-
+    
+       // Retrieves all communities
     @GetMapping
     public ResponseEntity<List<Community>> getAllCommunities() {
         return ResponseEntity.ok(communityService.getAllCommunities());
     }
+        // Retrieves all public communities
 
     @GetMapping("/public")
     public ResponseEntity<List<Community>> getPublicCommunities() {
         return ResponseEntity.ok(communityService.getPublicCommunities());
     }
+        // Retrieves a community by its ID
 
     @GetMapping("/{id}")
     public ResponseEntity<Community> getCommunityById(@PathVariable String id) {
@@ -92,16 +102,19 @@ public class CommunityController {
     public ResponseEntity<Community> removeAdmin(@PathVariable String communityId, @PathVariable String userId) {
         return ResponseEntity.ok(communityService.removeAdmin(communityId, userId));
     }
+        // Checks if user is a member of a community
 
     @GetMapping("/{communityId}/member/{userId}")
     public ResponseEntity<Boolean> isMember(@PathVariable String communityId, @PathVariable String userId) {
         return ResponseEntity.ok(communityService.isMember(communityId, userId));
     }
+        // Checks if user is an admin of a community
 
     @GetMapping("/{communityId}/admin/{userId}")
     public ResponseEntity<Boolean> isAdmin(@PathVariable String communityId, @PathVariable String userId) {
         return ResponseEntity.ok(communityService.isAdmin(communityId, userId));
     }
+        // Checks if user is the creator of a community
 
     @GetMapping("/{communityId}/creator/{userId}")
     public ResponseEntity<Boolean> isCreator(@PathVariable String communityId, @PathVariable String userId) {
