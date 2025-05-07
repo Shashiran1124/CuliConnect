@@ -4,16 +4,22 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
-
+/**
+ * Comment model class that represents a user comment in the system.
+ * Contains id, user info, content, and timestamps.
+ * 
+ * @author Navodya
+ * @version 1.0
+ */
 @AllArgsConstructor
 @NoArgsConstructor
 public class Comment {
-    private String id;
-    private String userId;
-    private String userName;
-    private String content;
-    private Date createdAt;
-    private Date updatedAt;
+    private String id;// Unique identifier for the comment
+    private String userId; // ID of the user who posted the comment
+    private String userName; // Name of the user
+    private String content;// Content of the comment
+    private Date createdAt; // Timestamp when comment was created
+    private Date updatedAt;// Timestamp when comment was last updated
 
     public String getId() {
         return id;
