@@ -21,7 +21,7 @@ import com.example.Backend.model.Like;
 import com.example.Backend.model.Post;
 import com.example.Backend.service.PostService;
 
-// PostController.java
+// PostController.java (updated)
 @RestController
 @RequestMapping("/api/posts")
 @CrossOrigin(origins = "*")
@@ -29,7 +29,7 @@ public class PostController {
     @Autowired
     private PostService postService;
 
-    // Create a post for a specific user
+    // Create a post for a specific user.
     @PostMapping("/user/{userId}")
     public ResponseEntity<Post> createPostForUser(@PathVariable String userId, @RequestBody Post post) {
         post.setUserId(userId);
