@@ -16,11 +16,12 @@ public class NotificationController {
 
     @Autowired
     private NotificationService notificationService;
-
+    
+    // Get all notifications for a specific user
     @GetMapping
     public ResponseEntity<?> getNotifications(@RequestParam String userId) {
         if (userId == null || userId.isEmpty()) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("userId is required");
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("userId  required");
         }
         try {
             List<Notification> notifications = notificationService.getUserNotifications(userId);
@@ -34,14 +35,14 @@ public class NotificationController {
     @GetMapping("/unread")
     public ResponseEntity<?> getUnreadNotifications(@RequestParam String userId) {
         if (userId == null || userId.isEmpty()) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("userId is required");
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("userId  required");
         }
         try {
             List<Notification> unreadNotifications = notificationService.getUnreadNotifications(userId);
             return ResponseEntity.ok(unreadNotifications);
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body("Error fetching unread notifications: " + e.getMessage());
+                    .body("Error  unread notifications: " + e.getMessage());
         }
     }
 
@@ -52,7 +53,7 @@ public class NotificationController {
             return ResponseEntity.noContent().build();
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body("Error marking notification as read: " + e.getMessage());
+                    .body("Error  notification as read: " + e.getMessage());
         }
     }
 }
