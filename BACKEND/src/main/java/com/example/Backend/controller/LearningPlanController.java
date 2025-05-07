@@ -109,6 +109,7 @@ public class LearningPlanController {
     @DeleteMapping("/{planId}/likes/{userId}")
     public ResponseEntity<LearningPlan> removeLike(
             @PathVariable String planId,
+            
             @PathVariable String userId) {
         LearningPlan updated = learningPlanService.removeLike(planId, userId);
         return new ResponseEntity<>(updated, HttpStatus.OK);
