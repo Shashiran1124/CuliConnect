@@ -103,6 +103,7 @@ public class LearningPlanService {
                 .filter(c -> !(c.getId().equals(commentId) && (c.getUserId().equals(userId) || isOwner)))
                 .collect(Collectors.toList()));
         return learningPlanRepository.save(plan);
+        
     }
 
     // Add like
