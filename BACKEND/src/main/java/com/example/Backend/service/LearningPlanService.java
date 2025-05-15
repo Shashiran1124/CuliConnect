@@ -80,6 +80,7 @@ public class LearningPlanService {
         comment.setUpdatedAt(new Date());
         plan.getComments().add(comment);
         return learningPlanRepository.save(plan);
+        
     }
 
     // Update comment
@@ -121,7 +122,7 @@ public class LearningPlanService {
             return learningPlanRepository.save(plan);
         }
         return plan;
-        
+
     }
 
     // Remove like
