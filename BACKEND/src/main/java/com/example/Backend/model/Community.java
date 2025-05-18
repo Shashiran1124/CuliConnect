@@ -8,16 +8,16 @@ import java.util.Set;
 @Document(collection = "communities")
 public class Community {
     @Id
-    private String id;
-    private String name;
-    private String description;
-    private String category;
-    private boolean isPrivate;
-    private String creatorId;
-    private Set<String> memberIds;
-    private Set<String> adminIds;
-    private String createdAt;
-    private String updatedAt;
+    private String id;  // Unique identifier for the community
+    private String name;  // Community name
+    private String description;  // Community description
+    private String category;  // Category this community belongs to
+    private boolean isPrivate;  // Flag to indicate if community is private
+    private String creatorId;  // ID of the user who created the community
+    private Set<String> memberIds;  // Set of user IDs who are members
+    private Set<String> adminIds;   // Set of user IDs who are admins
+    private String createdAt;  // Creation timestamp
+    private String updatedAt;  // Last updated timestamp
 
     public Community() {
         this.memberIds = new HashSet<>();
@@ -104,4 +104,7 @@ public class Community {
     public void setUpdatedAt(String updatedAt) {
         this.updatedAt = updatedAt;
     }
+
+     // TODO: Consider adding a community status field (e.g., ACTIVE, DELETED)
+    // TODO: Add audit log tracking for admin/member changes
 } 

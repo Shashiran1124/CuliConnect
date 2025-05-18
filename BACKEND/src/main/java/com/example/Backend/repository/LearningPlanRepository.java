@@ -15,6 +15,5 @@ public interface LearningPlanRepository extends MongoRepository<LearningPlan, St
 
     // Find all learning plans by userId
     List<LearningPlan> findByUserId(String userId);
-
     List<LearningPlan> findByUserIdOrderByCreatedAtDesc(String userId);
 }

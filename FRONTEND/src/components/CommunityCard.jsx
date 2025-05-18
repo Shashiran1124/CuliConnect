@@ -8,6 +8,9 @@ const CommunityCard = ({ community, currentUser, onJoin, onLeave }) => {
   const [isUserMember, setIsUserMember] = useState(false);
   const [loading, setLoading] = useState(false);
 
+
+    // Check if current user is a member of the community
+
   useEffect(() => {
     const checkMembership = async () => {
       if (currentUser && community) {
@@ -22,6 +25,9 @@ const CommunityCard = ({ community, currentUser, onJoin, onLeave }) => {
 
     checkMembership();
   }, [community, currentUser]);
+
+
+    // Handle join button click
 
   const handleJoin = async () => {
     if (!currentUser) {
@@ -118,6 +124,9 @@ const CommunityCard = ({ community, currentUser, onJoin, onLeave }) => {
       </div>
     </div>
   );
+  // TODO: Add support for showing number of admins
+// TODO: Add badge if user is admin/creator in UI
+
 };
 
 export default CommunityCard;

@@ -1,3 +1,13 @@
+/**
+ * Comment.js
+ * Component for displaying and managing user comments.
+ * Includes adding, editing, deleting comments with confirmation modal.
+ * 
+ * @author Navodya
+ * @version 1.0
+ */
+
+
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Edit, Trash, Send } from "lucide-react";
@@ -45,7 +55,7 @@ export const CommentForm = ({ postId, onAddComment, currentUser }) => {
       await onAddComment(postId, commentData);
       reset();
     } catch (error) {
-      console.error("Error adding comment:", error);
+      console.error(" adding comment Error:", error);
     } finally {
       setIsSubmitting(false);
     }

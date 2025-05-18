@@ -22,7 +22,7 @@ const PostCard = ({
   const isLikedByUser = post.likes?.some(
     (like) => like.userId === currentUser?.id
   );
-
+//Post Card.
   return (
     <div className="bg-white bg-opacity-30 backdrop-blur-lg rounded-xl shadow-md border border-white border-opacity-30 mb-6 overflow-hidden">
       {/* Post Header */}
@@ -48,11 +48,11 @@ const PostCard = ({
         </div>
       </div>
 
-      {/* Post Content */}
+      {/* Post Contents */}
       <div className="p-4">
         <p className="text-gray-800 mb-4">{post.description}</p>
 
-        {/* Media Content */}
+        {/* Media Contents */}
         {post.mediaUrls && post.mediaUrls.length > 0 && (
           <div
             className={`grid gap-2 mb-4 ${

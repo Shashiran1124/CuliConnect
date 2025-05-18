@@ -108,11 +108,16 @@ public class CommunityService {
         Community community = getCommunityById(communityId);
         return community.getMemberIds().contains(userId);
     }
+     
+
+        // Checks if a user is an admin of a community
 
     public boolean isAdmin(String communityId, String userId) {
         Community community = getCommunityById(communityId);
         return community.getAdminIds().contains(userId);
     }
+    
+        // Checks if a user is the creator of a community
 
     public boolean isCreator(String communityId, String userId) {
         Community community = getCommunityById(communityId);

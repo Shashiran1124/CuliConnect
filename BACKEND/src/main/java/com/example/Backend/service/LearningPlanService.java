@@ -80,6 +80,7 @@ public class LearningPlanService {
         comment.setUpdatedAt(new Date());
         plan.getComments().add(comment);
         return learningPlanRepository.save(plan);
+        
     }
 
     // Update comment
@@ -103,6 +104,7 @@ public class LearningPlanService {
                 .filter(c -> !(c.getId().equals(commentId) && (c.getUserId().equals(userId) || isOwner)))
                 .collect(Collectors.toList()));
         return learningPlanRepository.save(plan);
+
     }
 
     // Add like
@@ -120,6 +122,7 @@ public class LearningPlanService {
             return learningPlanRepository.save(plan);
         }
         return plan;
+
     }
 
     // Remove like
